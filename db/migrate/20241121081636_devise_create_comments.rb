@@ -4,8 +4,12 @@ class DeviseCreateComments < ActiveRecord::Migration[7.0]
   def change
     create_table :comments do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      
+      t.text :content,              null:false,
+      t.references :prototype,      null:false,
+      t.references :user,           null:false,
+
+
 
       ## Recoverable
       t.string   :reset_password_token

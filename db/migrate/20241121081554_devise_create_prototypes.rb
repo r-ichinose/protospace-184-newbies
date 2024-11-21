@@ -4,8 +4,12 @@ class DeviseCreatePrototypes < ActiveRecord::Migration[7.0]
   def change
     create_table :prototypes do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      
+      t.string :title,              null: false,
+      t.text   :catch_copy,         null: false,
+      t.text   :concept,            null: false,
+      t.references :user,           nill: false,
+
 
       ## Recoverable
       t.string   :reset_password_token
