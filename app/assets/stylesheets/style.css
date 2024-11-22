@@ -54,7 +54,7 @@ a {
 .logo {
   width: 200px;
 }
-.nav__btn{
+.nav__btn {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
@@ -64,6 +64,10 @@ a {
   border: 1px #87CEFA solid;
   border-radius: 3px;
   transition: 0.4s ease;
+}
+.nav__btn a{
+  font-size: 0.8em;
+  color: #87CEFA;
 }
 .nav__btn:hover{
   color: #fff;
