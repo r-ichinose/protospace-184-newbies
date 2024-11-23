@@ -82,6 +82,10 @@ a {
   text-decoration: none;
   user-select: none;
 }
+.nav__logout a{
+  font-size: 0.8em;
+  color: #87CEFA;
+}
 .nav__logout:hover{
   opacity: 0.5;
 }
