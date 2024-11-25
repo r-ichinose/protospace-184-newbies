@@ -9,6 +9,10 @@ class PrototypesController < ApplicationController
   def create
   end
 
+  def show
+    @prototype = Prototype.find(params[:id])
+  end
+
   private
 
   def prototype_params
