@@ -40,12 +40,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_11_25_030217) do
   end
 
   create_table "prototypes", charset: "utf8mb3", force: :cascade do |t|
-    t.string "title"
-    t.text "catch_copy"
-    t.text "concept"
+    t.string "title", null: false
+    t.text "catch_copy", null: false
+    t.text "concept", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_prototypes_on_user_id"
   end
 
