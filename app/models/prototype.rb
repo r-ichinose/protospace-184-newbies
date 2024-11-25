@@ -1,6 +1,12 @@
 class Prototype < ApplicationRecord
   belongs_to :user
 
+  has_one_attached :image
+
+  # validates
+end
+
+
   validates :title, presence: true, length: { maximum: 50 }
   validates :catch_copy, presence: true, length: { maximum: 100 }
   validates :concept, presence: true, length: { maximum: 300 }
