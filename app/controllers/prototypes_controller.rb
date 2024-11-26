@@ -34,6 +34,15 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def destroy
+    @prototype = Prototype.find(params[:id])
+    if @prototype.destroy
+      redirect_to root_path, notice: '投稿を削除しました。'
+    else
+      redirect_to prototype_path(@prototype), alert: '削除に失敗しました。'
+    end
+  end
+
   private
 
   def prototype_params

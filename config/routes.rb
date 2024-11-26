@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "prototypes#index"
 #     プロトタイプ-詳細機能
-  resources :prototypes, only: [:index, :new, :create, :show, :edit, :update]
+  resources :prototypes
 end
