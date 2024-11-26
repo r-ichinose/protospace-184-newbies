@@ -5,7 +5,7 @@
     <% if current_user %>
       <div class="greeting">
         <%="こんにちは、" %>
-        <%= link_to "#{current_user.name}", class: :greeting__link %><%="さん"%>
+        <%= link_to "#{current_user.name}",user_path(current_user), class: :greeting__link %><%="さん"%>
         <div class="card__wrapper">
           <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
           <% @prototypes.each do |prototype| %>
