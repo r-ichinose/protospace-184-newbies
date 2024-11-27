@@ -6,22 +6,13 @@
       <div class="greeting">
         <%="こんにちは、" %>
         <%= link_to "#{current_user.name}さん",user_path(current_user), class: :greeting__link %>
-        <div class="card__wrapper">
-          <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-          <% @prototypes.each do |prototype| %>
-            <%= render partial: "prototype", locals: { prototype: prototype } %>
-          <% end %>
-        </div>
-      </div> 
-    <% else %>
-      <%# // ログインしているときは上記を表示する %>
-      <div class="card__wrapper">
-        <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-          <!-- プロトタイプ-詳細機能 -->
-        <% @prototypes.each do |prototype| %>
-          <%= render partial: "prototype", collection: @prototypes %>
-        <% end %>
       </div>
     <% end %>
+    <div class="card__wrapper">
+      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
+      <% @prototypes.each do |prototype| %>
+        <%= render partial: "prototype", locals: { prototype: prototype } %>
+      <% end %>
+    </div> 
   </div>
 </main>
